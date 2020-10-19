@@ -1,0 +1,7 @@
+<%= render "shared/header" %>
+<h1>内容編集</h1>
+
+<%= render 'form', calender_event: @calender_event %>
+
+<%= link_to '詳細', @calender_event %> 
+<%= link_to '戻る', calender_events_path %>

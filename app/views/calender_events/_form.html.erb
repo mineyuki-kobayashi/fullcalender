@@ -1,0 +1,33 @@
+<%= form_with(model: calender_event, local: true) do |form| %>
+  <% if calender_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(calender_event.errors.count, "error") %> prohibited this calender_event from being saved:</h2>
+
+      <ul>
+        <% calender_event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, "表示名"%>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description,"内容" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date, "納期" %>
+    <%= form.datetime_select :start_date, default: params[:y] == nil ? Date.new(2020,6,10) : Date.new(params[:y].to_i, params[:m].to_i + 1, params[:d].to_i) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "作成" %>
+  </div>
+  
+<% end %>
