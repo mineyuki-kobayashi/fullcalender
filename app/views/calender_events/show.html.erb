@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @calender_event.title %>
+</p>
+
+<p>
+  <strong>内容:</strong>
+  <%= @calender_event.description %>
+</p>
+
+<p>
+  <strong>納期:</strong>
+  <%= @calender_event.start_date.in_time_zone("Asia/Tokyo").strftime("%Y年 %m月 %d日") %>
+</p>
+
+<%= link_to '編集', edit_calender_event_path(@calender_event) %> |
+<%= link_to '一覧画面', calender_events_path %>

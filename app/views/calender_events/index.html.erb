@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>業務内容</th>
+      <th>納期</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calender_events.each do |calender_event| %>
+      <tr>
+        <td><%= calender_event.title %></td>
+        <td><%= calender_event.description %></td>
+        <td><%= calender_event.start_date.in_time_zone("Asia/Tokyo").strftime("%Y年 %m月 %d日") %></td>
+        <td><%= link_to '詳細', calender_event %></td>
+        <td><%= link_to '編集', edit_calender_event_path(calender_event) %></td>
+        <td><%= link_to '削除', calender_event, method: :delete, data: { confirm: '予定を消しますか？' } %></td>
+      </tr>
+    <% end %>
+    <div class = "calender">
+
+    </div>
+
+  </tbody>
+</table>
+
+<br>
+<%#= link_to 'New Calender Event', new_calender_event_path %>
