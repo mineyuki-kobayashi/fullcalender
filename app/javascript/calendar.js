@@ -10,8 +10,13 @@ document.addEventListener('turbolinks:load', function() {
     plugins: [ dayGridPlugin, interactionPlugin ],
     locale: jaLocale,
     dateClick: function(info){
-      alert('Clicked on: ' + info.dateStr);
-    }
+      window.location.href = '/calender_events/new?y=' + info.date.getFullYear() + '&m=' + info.date.getMonth() + '&d=' + info.date.getDate();
+    },
+    eventClick: function(info){
+      window.location.href = '/calender_events/' + info.event._def.publicId
+    },
+
+    events: 'calender_events.json'
   });
   calendar.render();
 });
