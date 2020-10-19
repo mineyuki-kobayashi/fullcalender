@@ -1,0 +1,23 @@
+header {
+  display: flex; /*headerの中のh1タグとnavタグを横並びにする*/
+  justify-content: space-between; /*両サイドに寄せる*/
+  height: 70px; /*高さを70pxにする*/
+  align-items: center; /*文字を中央に持ってくる*/
+  padding: 0 35px; /*上下0、左右に35pxのpaddingをつける*/
+  background-color: black; /*背景を黒にする(今回高さが分かりやすいように黒にした)*/
+  color: white; /*文字の色を白にする*/
+  margin-bottom: 15px;
+}
+header h1 {
+  font-size: 1.4em; /*フォントの大きさを指定(pxでも可)*/
+}
+#nav ul {
+  color: white;
+  list-style: none;
+  display: flex; /*文字の横並び */
+}
+#nav li {
+  border: none;
+  font-weight: bold;
+  margin-left: 35px;
+}
