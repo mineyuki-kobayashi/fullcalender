@@ -1,24 +1,17 @@
-# README
+# 営業カレンダー（fullcarender）
+ 
+営業などの納期を可視化させることができる。
+ 
+# DEMO
+ 
+"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+ 
+# Features
+ 
+他のカレンダーとの違いは機能は納期登録のみにし
+日付を見るだけで何が納期かわかる。
+ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Author
+ 
+* 小林峰征
