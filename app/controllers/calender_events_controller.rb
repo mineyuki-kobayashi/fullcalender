@@ -27,7 +27,7 @@ class CalenderEventsController < ApplicationController
     @calender_event = CalenderEvent.new(calender_event_params)
     respond_to do |format|
       if @calender_event.save
-        format.html { redirect_to @calender_event, notice: 'Calender event was successfully created.' }
+        format.html { redirect_to @calender_event, notice: '予定を追加しました。' }
         format.json { render :show, status: :created, location: @calender_event }
       else
         format.html { render :new }
@@ -41,7 +41,7 @@ class CalenderEventsController < ApplicationController
   def update
     respond_to do |format|
       if @calender_event.update(calender_event_params)
-        format.html { redirect_to @calender_event, notice: 'Calender event was successfully updated.' }
+        format.html { redirect_to @calender_event, notice: '予定を変更しました。' }
         format.json { render :show, status: :ok, location: @calender_event }
       else
         format.html { render :edit }
@@ -55,7 +55,7 @@ class CalenderEventsController < ApplicationController
   def destroy
     @calender_event.destroy
     respond_to do |format|
-      format.html { redirect_to calender_events_url, notice: 'Calender event was successfully destroyed.' }
+      format.html { redirect_to calender_events_url, notice: '予定を削除しました。' }
       format.json { head :no_content }
     end
   end
