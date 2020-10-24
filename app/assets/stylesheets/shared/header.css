@@ -1,7 +1,7 @@
 header {
   display: flex; /*headerの中のh1タグとnavタグを横並びにする*/
   justify-content: space-between; /*両サイドに寄せる*/
-  height: 70px; /*高さを70pxにする*/
+  height: 60px; /*高さを60pxにする*/
   align-items: center; /*文字を中央に持ってくる*/
   padding: 0 35px; /*上下0、左右に35pxのpaddingをつける*/
   background-color: black; /*背景を黒にする(今回高さが分かりやすいように黒にした)*/
@@ -21,3 +21,4 @@ header h1 {
   font-weight: bold;
   margin-left: 35px;
 }
+

@@ -20,3 +20,4 @@ document.addEventListener('turbolinks:load', function() {
   });
   calendar.render();
 });
+
