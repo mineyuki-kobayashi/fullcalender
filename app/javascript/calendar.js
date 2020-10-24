@@ -9,6 +9,7 @@ document.addEventListener('turbolinks:load', function() {
   var calendar = new Calendar(calendarEl, {
     plugins: [ dayGridPlugin, interactionPlugin ],
     locale: jaLocale,
+    timeZone: 'UTC',
     dateClick: function(info){
       window.location.href = '/calender_events/new?y=' + info.date.getFullYear() + '&m=' + info.date.getMonth() + '&d=' + info.date.getDate();
     },
@@ -19,5 +20,6 @@ document.addEventListener('turbolinks:load', function() {
     events: 'calender_events.json'
   });
   calendar.render();
+  
 });
 

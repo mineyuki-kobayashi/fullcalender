@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2020_10_11_053014) do
   create_table "calender_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "start_date"
     t.datetime "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
