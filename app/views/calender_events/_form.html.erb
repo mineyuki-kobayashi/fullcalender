@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :end_date, "納期" %>
-    <%= form.datetime_select :end_date, default: params[:y] == nil ? Date.new(2020,6,10) : Date.new(params[:y].to_i, params[:m].to_i + 1, params[:d].to_i) %>
+    <%= form.datetime_select :end_date, default: params[:y] == nil ? Date.new(2020,6,10) : Date.new(params[:y].to_i, params[:m].to_i + 1, params[:d].to_i),use_month_numbers: true,discard_year: true,date_separator: '月',time_separator:'時'  %>
   </div>
 
   <div class="actions">
